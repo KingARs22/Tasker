@@ -1,0 +1,29 @@
+/* src/Styles/Filterbar.css */
+
+.filterbar-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.filter-button {
+    background-color: #4299e1; /* Blue-500 */
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.filter-button:hover {
+    background-color: #3182ce; /* Blue-600 */
+}
+
+.filter-button:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.filter-button:last-child {
+    border-radius: 0 5px 5px 0;
+}

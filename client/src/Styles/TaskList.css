@@ -1,0 +1,123 @@
+/* src/Styles/TaskList.css */
+body, html {
+    overflow: visible !important;
+    position: relative;
+}
+.task-list-container {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 20px;
+    position: relative;
+    overflow: visible !important; /* Ensure dropdowns are not clipped */
+    z-index: 1;
+}
+
+.task-card {
+    position: relative; /* Needed for absolute positioning of dropdown */
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f5;
+    transition: transform 0.2s ease-in-out;
+    z-index: 10; /* Keep above general background */
+}
+
+.task-card:hover {
+    transform: scale(1.02);
+}
+
+.task-card.todo {
+    background-color: #ffeb99;
+}
+
+.task-card.completed {
+    background-color: #b7e4c7;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.task-description {
+    font-size: 14px;
+    color: #333;
+    margin-top: 8px;
+}
+
+.dropdown-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 100 !important;
+}
+
+.task-dropdown {
+    position: absolute !important;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999 !important; /* Ensure dropdown is always on top */
+    white-space: nowrap !important; /* Prevent wrapping */
+}
+.task-dropdown.fixed {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+}
+
+.task-option {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.task-option:hover {
+    background-color: #f0f0f0;
+}
+
+.task-option.delete {
+    color: red;
+}
+
+/* Container for the "+" button in TaskList */
+.tasklist-add-task-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+/* Unique "+" button for TaskList */
+.tasklist-add-task-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.tasklist-add-task-btn:hover {
+    background-color: #0056b3;
+}
