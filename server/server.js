@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGODB_URI)
     .catch(err => console.error("Database connection error:", err));
 
 const taskSchema = new mongoose.Schema({
-    title: String,
+    title: {type: String, required: true},
     description: String,
     status: String
 });
