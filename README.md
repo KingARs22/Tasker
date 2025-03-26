@@ -1,8 +1,8 @@
------------------------------------------------------------------------------------------------------
+
 Live client URL - "https://tasker-liard-phi.vercel.app/"
 Live server URL - "https://tasker-1-7keh.onrender.com/"
 
--------------------------------------------------------------------------------------------------------
+
 
 FOR CLIENT SETUP 
 run commands,
@@ -21,7 +21,7 @@ If running on local machine, client will start on "http://localhost:5000"
   ** if dependencies are not installed run command,
         npm i express mongoose cors dotenv 
 
-------------------------------------------------------------------------------------------------------------
+
 All the API endpoints are : 
 1. Get All Tasks
    Endpoint - GET /tasks
@@ -77,14 +77,17 @@ All the API endpoints are :
              {
                 "message": "Task deleted"
               }
-----------------------------------------------------------------------------------------------------
+
+
 Testing with POSTMAN 
 1. Create new request
 2. Set request type (GET,POST,PUT,DELETE)
 3. For POST and PUT requests, go to the Body tab and select raw, then use JSON Format.
 4. Set Content-type as application/json in the Headers
 5. Click Send to execute the request and view responses
------------------------------------------------------------------------------------------------------
+
+
+
 Below attached are the Screenshots of the Website and also a demo of the website. It is also uploaded on the repo.
 
 
