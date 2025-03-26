@@ -1,7 +1,9 @@
 -----------------------------------------------------------------------------------------------------
 Live client URL - "https://tasker-liard-phi.vercel.app/"
 Live server URL - "https://tasker-1-7keh.onrender.com/"
------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------
+
 FOR CLIENT SETUP 
 run commands,
   cd client 
@@ -18,7 +20,8 @@ If running on local machine, client will start on "http://localhost:5000"
   ** ensure all the required dependencies are installed (express mongoose cors dotenv)
   ** if dependencies are not installed run command,
         npm i express mongoose cors dotenv 
-------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------
 All the API endpoints are : 
 1. Get All Tasks
    Endpoint - GET /tasks
