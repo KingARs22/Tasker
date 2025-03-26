@@ -1,90 +1,115 @@
 
-Live client URL - "https://tasker-liard-phi.vercel.app/"
-Live server URL - "https://tasker-1-7keh.onrender.com/"
+Tasker - Task Management Application
 
+Live URLs:
+- Client: https://tasker-liard-phi.vercel.app/
+- Server: https://tasker-1-7keh.onrender.com/
 
+--------------------------------
+Setup Instructions
 
-FOR CLIENT SETUP 
-run commands,
-  cd client 
-  npm start
-IF running on local machine, client will start on  "http://localhost:3000"
-  ** ensure all the required dependencies are installed
-FOR SERVER SETUP
-In .env file put your own MONGODB_URI
-  for.e.g. - MONGODB_URI = "YOUR_MONGODB_URI"
-run commands,
-  cd server
-  npm start
-If running on local machine, client will start on "http://localhost:5000"
-  ** ensure all the required dependencies are installed (express mongoose cors dotenv)
-  ** if dependencies are not installed run command,
-        npm i express mongoose cors dotenv 
+Client Setup:
+1. Navigate to the client directory:
+   cd client
+2. Start the client:
+   npm start
+3. If running locally, the client will be available at:
+   http://localhost:3000
 
+Note: Ensure all required dependencies are installed.
 
-All the API endpoints are : 
+Server Setup:
+1. Configure the .env file with your MongoDB connection string:
+   MONGODB_URI="YOUR_MONGODB_URI"
+2. Navigate to the server directory:
+   cd server
+3. Start the server:
+   npm start
+4. If running locally, the server will be available at:
+   http://localhost:5000
+
+Note: Ensure dependencies (express, mongoose, cors, dotenv) are installed.
+If not, install them using:
+   npm i express mongoose cors dotenv
+
+--------------------------------
+API Endpoints
+
 1. Get All Tasks
-   Endpoint - GET /tasks
-   RESPONSE - for e.g.
-   [
-      {
-        "_id": "60d5f60f9ebf8b001c8e4b32",
-        "title": "Task 1",
-        "description": "Description of Task 1",
-        "status": "pending"
-      }
-    ]
-2. Get a single task
-   Endpoint - GET /tasks/:id
-   RESPONSE - for e.g {
-                        "_id": "60d5f60f9ebf8b001c8e4b32",
-                        "title": "Task 1",
-                        "description": "Description of Task 1",
-                        "status": "pending"
-                      }
-3. Create New Task
-   Endpoint - POST /tasks
-   REQUEST - for e.g.
-             {
-                "title": "New Task",
-                "description": "Task details",
-                "status": "pending"
-             }
-    RESPONSE - for e.g.
-             {
-                "_id": "60d5f60f9ebf8b001c8e4b33",
-                "title": "New Task",
-                "description": "Task details",
-                "status": "pending"
-              }
-4. Update a task
-   Endpoint - PUT /tasks/:id
-   REQUEST - for e.g.
-             {
-                "title": "Updated Task Title",
-                "status": "completed"
-              }
-   RESPONSE - for e.g.
-             {
-                "_id": "60d5f60f9ebf8b001c8e4b32",
-                "title": "Updated Task Title",
-                "description": "Description of Task 1",
-                "status": "completed"
-              }
-5. Delete a task
-   Endpoint - DELETE /tasks/:id
-   RESPONSE - for e.g.
-             {
-                "message": "Task deleted"
-              }
+   - Endpoint: GET /tasks
+   - Response Example:
+     [
+       {
+         "_id": "60d5f60f9ebf8b001c8e4b32",
+         "title": "Task 1",
+         "description": "Description of Task 1",
+         "status": "pending"
+       }
+     ]
+
+2. Get a Single Task
+   - Endpoint: GET /tasks/:id
+   - Response Example:
+     {
+       "_id": "60d5f60f9ebf8b001c8e4b32",
+       "title": "Task 1",
+       "description": "Description of Task 1",
+       "status": "pending"
+     }
+
+3. Create a New Task
+   - Endpoint: POST /tasks
+   - Request Example:
+     {
+       "title": "New Task",
+       "description": "Task details",
+       "status": "pending"
+     }
+   - Response Example:
+     {
+       "_id": "60d5f60f9ebf8b001c8e4b33",
+       "title": "New Task",
+       "description": "Task details",
+       "status": "pending"
+     }
+
+4. Update a Task
+   - Endpoint: PUT /tasks/:id
+   - Request Example:
+     {
+       "title": "Updated Task Title",
+       "status": "completed"
+     }
+   - Response Example:
+     {
+       "_id": "60d5f60f9ebf8b001c8e4b32",
+       "title": "Updated Task Title",
+       "description": "Description of Task 1",
+       "status": "completed"
+     }
+
+5. Delete a Task
+   - Endpoint: DELETE /tasks/:id
+   - Response Example:
+     {
+       "message": "Task deleted"
+     }
+
+--------------------------------
+Testing with Postman
+
+1. Open Postman and create a new request.
+2. Select the request type (GET, POST, PUT, DELETE).
+3. For POST and PUT requests:
+   - Go to the Body tab.
+   - Select raw.
+   - Use JSON format.
+4. Set Content-Type as application/json in the Headers.
+5. Click Send to execute the request and view the response.
+
+--------------------------------
 
 
-Testing with POSTMAN 
-1. Create new request
-2. Set request type (GET,POST,PUT,DELETE)
-3. For POST and PUT requests, go to the Body tab and select raw, then use JSON Format.
-4. Set Content-type as application/json in the Headers
-5. Click Send to execute the request and view responses
 
 
 
